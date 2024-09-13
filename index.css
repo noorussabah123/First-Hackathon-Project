@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   background-color: #29726e;
+}
+
+.info {
+    background-color:  rgb(247, 247, 233);
+    color: #080808;
+}
+
+.heading-container {
+    width: 100%;
+    text-align: center;
+    
+}
+
+.heading-container h1 {
+    color: #faf9f9;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+#form-container {
+    display: block;
+}
+
+.form-container {
+    background-color: rgb(247, 247, 233);
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 90%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    overflow: auto;
+}
+
+input, textarea {
+    width: 100%;
+    border-bottom: 2px solid #29726e;
+    border: none;
+    padding: 0.5em;
+    outline: none;
+    font-size: 1em;
+}
+
+input:focus, textarea:focus {
+    border-bottom: 2px solid #004d40; 
+}
+
+label { 
+   display: block;
+   text-align: left;
+   font-weight: bold;
+   margin-bottom: 0.5em; 
+}
+
+
+.personal-info, .professional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 1;
+    min-width: 0;
+}
+
+.personal-info form, .professional-info form {
+    margin: 0;
+}
+
+.personal-info h2, .professional-info h2 {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 0.5em;
+}
+
+
+button {
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.60em 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0.5em 0;
+}
+
+
+button.generate-cv-btn { 
+    background-color:  #123c41;
+    color: #ffffff; /* White text */
+    font-weight: bold; /* Bold text */
+    margin-top: 0.5em;
+    padding: 0.80em 1.5em;
+}
+
+button.generate-cv-btn:hover {
+    background-color: #29726e; /* Darker teal on hover */
+}
+
+button.generate-cv-btn:active {
+    background-color: #0d2a2b; /* Even darker teal on click */
+}
+
+button.generate-cv-btn:disabled {
+    background-color: #a1a1a1; /* Gray for disabled */
+    cursor: not-allowed;
+}
+
+
+/* For mobile devices (portrait) */
+@media (max-width: 480px) {
+    .form-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        width: 100%;
+        padding: 1em;
+        margin: 1em auto;
+    }
+
+    .personal-info, .professional-info {
+        gap: 0.5em;
+    }
+
+    .heading-container h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 0.5em;
+    }
+}
+
+/* For tablets (landscape) and small desktops */
+@media (min-width: 481px) and (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr; /* Single column layout for medium screens */
+        width: 100%;
+        padding: 1.5em;
+        margin: 1.5em auto;
+    }
+
+    .heading-container h1 {
+        font-size: 2.2em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 0.55em;
+    }
+}
+
+/* For larger desktops */
+@media (min-width: 769px) {
+    .form-container {
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+        width: 90%;
+        max-width: 800px;
+        padding: 2em;
+    }
+
+    .heading-container h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 0.6em 1em;
+    }
+}
+
+
+
+
+/* Style for the resume output */
+ .resume-output {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    background-color: #fff; /* White background for resume */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    
+}
+
+.resume-output img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.resume-output h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #070000cc; /* Dark color for headings */
+    margin-bottom: 10px;
+}
+
+.number {
+    position: absolute;
+    top: 6em; 
+    right: 1.5em;
+    font-size: 1em; 
+    text-align: right; 
+    
+}
+
+.address {
+    position: absolute;
+    top: 8em; 
+    right: 1.5em;
+    font-size: 1em; 
+    text-align: right; 
+}
+
+
+#buttonsContainer {
+    position: absolute; 
+    bottom: -80px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+    margin-top: 20px; 
+    
+}
+
+.download-button {
+    background-color:  #123c41; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 10px 0; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color:  #29726e;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .resume-output h2 {
+        font-size: 1.5em; /* Smaller font for headings */
+    }
+
+    .number {
+        top: 7em;
+        right: 0.5em;
+        font-size: 0.6em; /* Smaller font size */
+    }
+
+    .address {
+        top: 9em;
+        right: 0.5em;
+        font-size: 0.6em; /* Smaller font size */
+    }
+
+    #buttonsContainer {
+        bottom: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .resume-output h2 {
+        font-size: 1.75em; /* Adjust font size for tablet */
+    }
+
+    .number, .address {
+        top: 5.5em;
+        right: 1em;
+        font-size: 1em;
+    }
+
+    .address {
+        top: 7em;
+        right: 1em;
+        font-size: 1em;
+    }
+
+    #buttonsContainer {
+        bottom: -70px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .resume-output h2 {
+        font-size: 2em; /* Default larger font size */
+    }
+
+    .number, .address {
+        top: 6em;
+        right: 1.5em;
+        font-size: 1em;
+    }
+
+    .address {
+        top: 8em;
+        right: 1.5em;
+        font-size: 1em;
+    }
+
+    #buttonsContainer {
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}

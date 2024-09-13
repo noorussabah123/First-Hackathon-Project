@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>Resume Generator</title>
+</head>
+<body>
+    <div id="form-container">
+    <div class="heading-container">
+        <h1>Resume Generator</h1>
+        <div class="form-container">
+            <form>
+            <div class="personal-info">
+            <h2 class="info">Personal Information</h2>
+                 <label for="profile-pic">Upload Your Picture</label>
+                 <input type="file" id="profile-pic" accept="image/*">
+                 <br><br>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Your name" required>
+                <br>
+                <br>
+                <label for="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" placeholder="Your Phone Number" required>
+                <br>
+                <br>
+                <label for="address">Your Address</label>
+                <textarea id="address" placeholder="Your Address" rows="5" cols="50" required></textarea>
+                <br>
+                <br>
+                <label>Important Links</label>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter here" required>
+                <br>
+                <br>
+                <label for="linkedin">LinkedIn</label>
+                <input type="url" id="linkedin" placeholder="Enter here">
+                <br>
+                <br>
+                <label for="github">GitHub</label>
+                <input type="url" id="github" placeholder="Enter here">
+            </form>
+           </div>
+           <form>
+        <div class="professional-info">
+            <h2 class="info">Professional Information</h2>
+                <label for="objective">Objective</label>
+                <textarea id="objective" placeholder="Enter here" rows="5" cols="50"></textarea>
+                <br>
+                <br>
+                <br>
+                <label for="work-experience">Work Experience</label>
+                <textarea id="work-experience" placeholder="Enter here" rows="5" cols="50"></textarea>
+                <br>
+                <br>
+                <br>
+                <label for="qualification">Academic Qualification</label>
+                <textarea id="qualification" placeholder="Enter here" rows="5" cols="50"></textarea>
+                <br>
+                <label for="skills">Skills</label>
+               <textarea id="skills" placeholder="List your skills, separated by commas" rows="5" cols="50"></textarea>
+               <br><br>
+        </div>
+    </form>
+        </div>
+        <button type="submit" class="generate-cv-btn">Generate Resume</button>
+    </div>
+</div>
+    <div id="resume-output" class="resume-output"></div>
+
+     <script src="index.js"></script>
+</body>
+</html>
