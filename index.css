@@ -220,6 +220,41 @@ button.generate-cv-btn:disabled {
     margin-bottom: 10px;
 }
 
+.links {
+    background-color: #29726e;
+    border-radius: .5em;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.objective {
+    background-color: #29726e;
+    border-radius: .5em;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.experience {
+    background-color: #29726e;
+    border-radius: .5em;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.qualification {
+    background-color: #29726e;
+    border-radius: .5em;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.skill {
+    background-color: #29726e;
+    border-radius: .5em;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
 .number {
     position: absolute;
     top: 6em; 
@@ -252,14 +287,14 @@ button.generate-cv-btn:disabled {
     background-color:  #123c41; 
     color: white; 
     border: none; 
-    padding: 10px 20px; 
+     padding: 10px 20px;
     text-align: center; 
     text-decoration: none; 
-    display: inline-block; 
+     display: inline-block;  
     font-size: 16px; 
-    margin: 10px 0; 
+     margin: 10px 0; 
     border-radius: 5px; 
-    cursor: pointer; 
+     cursor: pointer; 
     transition: background-color 0.3s;
 }
 
